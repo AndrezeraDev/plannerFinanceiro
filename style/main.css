@@ -1,0 +1,219 @@
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E5E5E5;
+    font-family: "Raleway", serif;
+    transition: margin-left 0.3s ease;
+}
+
+/* Container principal que será deslocado */
+.main-container {
+    transition: margin-left 0.3s ease;
+    margin-left: 0;
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    padding: 10px;
+}
+
+/* Logo fixada à direita */
+.logo {
+    margin-left: auto; /* Empurra a logo para a direita */
+}
+
+.logo img {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+/* Botão de menu */
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Menu lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Escondido por padrão */
+    width: 250px;
+    height: 100%;
+    background-color: #000000;
+    padding-top: 50px;
+    transition: left 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li:hover {
+    background-color: #444;
+}
+
+/* Quando o menu está aberto */
+.sidebar.open {
+    left: 0;
+}
+
+/* Movendo o conteúdo quando o menu estiver aberto */
+.main-container.open {
+    margin-left: 250px; /* Empurra o conteúdo para a direita */
+}
+
+
+.saudacao-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    background-color: greenyellow;
+}
+
+.saudacao {
+    margin-right: 5px;
+}
+
+
+/* Container principal */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 25vh;
+    border-bottom: 1px solid #ccc;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.movimentacoes-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.movimentacoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.movimentacoes-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    margin-top: 20%;
+    
+}
+
+.movimentacoes-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.movimentacoes-table th,
+.movimentacoes-table td {
+    padding: 12px 15px;
+}
+
+.movimentacoes-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.movimentacoes-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.movimentacoes-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.movimentacoes-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.movimentacoes-table tbody tr.active-row td {
+    border-bottom: 2px solid #009879;
+}
+
+.movimentacoes-table tbody tr:hover {
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+.movimentacoes-table tbody tr td {
+    text-align: center;
+}
+
+/* Para todas as células da tabela */
+.movimentacoes-table tbody tr td {
+    text-align: left; /* Defina um alinhamento padrão, se necessário */
+}
+
+.entrada img {
+    width: 30px;
+    height: 30px;
+}
+
+.saida img {
+    width: 30px;
+    height: 30px;
+}
+
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner Financeiro</title>
+    <link rel="stylesheet" href="/style/main.css">
+
+    <!--fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <div class="logo">
+                <img src="/assets/Design sem nome (1).png" alt="financeiro logo">
+            </div>
+        </header>
+
+        <!-- Menu lateral -->
+        <nav id="sidebar" class="sidebar">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Transações</a></li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <div class="saudacao-div">
+                <h1 class="saudacao">Olá, <span id="nomeUser"></span>!</h1><br>
+                <p>Seja bem-vindo ao seu planner financeiro.</p>
+            </div>
+
+            <div class="container">
+                <div class="card">
+                    <h2>Receita</h2>
+                    <p class="valor">R$ 0,00</p>
+                </div>
+                <div class="card">
+                    <h2>Despesa</h2>
+                    <p class="valor">R$ 0,00</p>
+                </div>
+                <div class="card">
+                    <h2>Saldo</h2>
+                    <p class="valor">R$ 0,00</p>
+                </div>
+            </div>
+            <h3 class="movimentacoes-title">movimentações recentes</h3>
+            <div class="movimentacoes">
+                <table class="movimentacoes-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tipo">Receita</td>
+                            <td class="descricao">Salário</td>
+                            <td class="valor">R$ 5.000,00</td>
+                            <td class="entrada"><img src="/assets/entrada.png" alt=""> </td>
+                        </tr>
+                        <tr>
+                            <td class="tipo">Despesa</td>
+                            <td class="descricao">Aluguel</td>
+                            <td class="valor">R$ 1.000,00</td>
+                            <td class="saida"><img src="/assets/saida.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="tipo">Receita</td>
+                            <td class="descricao">Investimentos</td>
+                            <td class="valor">R$ 500,00</td>
+                            <td class="entrada"><img src="/assets/entrada.png" alt=""></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+        </main>
+    </div>
+
+    <script src="/public/app.js"></script>
+    <script>
+        
+
+        function saveName() {
+            const nomeUser = prompt('Para iniciarmos digite seu nome:');
+            document.getElementById('nomeUser').innerText = nomeUser;
+
+            localStorage.setItem('nomeUser', nomeUser);
+        }
+
+        setTimeout(saveName, 1000);
+
+        
+    </script>
+</body>
+
+</html>
+
