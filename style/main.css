@@ -341,4 +341,20 @@ select {
     height: 30px;
 }
 
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 25%;
+}
+
+.delete-btn:hover {
+    background-color: #ff4d4d;
+}
+
 
